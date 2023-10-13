@@ -1,0 +1,287 @@
+#firstline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#firstline img {
+  max-width: 150px;
+  margin-right: 10px;
+}
+
+#firstline h1 {
+  font-size: 38px;
+}
+
+#tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+#tooltip {
+  width: 180px;
+  background-color: #fff;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+}
+
+#triangle {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #fff;
+  position: absolute;
+  top: -8px;
+  left: 15%;
+}
+
+#tooltip-icon {
+  width: 20px;
+  height: 20px;
+  background-color: orange;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+#tooltip-content {
+  display: flex;
+  align-items: center;
+}
+
+#search-form {
+  max-width: 530px;
+  margin: 0 auto;
+  border: 1px solid black;
+  text-align: center;
+}
+
+input[type='text'],
+input[type='checkbox'],
+select {
+  padding: 3px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+input[type='number'] {
+  padding: 3px;
+  margin: 8px 8px;
+  width: 80px;
+}
+button[type='button'] {
+  margin-top: 8px;
+  padding: 6px 10px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 3px;
+  background-color: #ccc;
+}
+button[type='button']:hover {
+  background-color: green;
+  color: white;
+}
+
+select {
+  text-align-last: center;
+}
+
+label {
+  display: inline-block;
+  width: auto;
+  font-weight: bold;
+}
+
+.horizontal-line {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 0;
+  height: 0;
+  padding: 0;
+}
+
+#results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.results-headline {
+  margin: 0;
+  height: 60px;
+}
+
+.headlineHr {
+  border: none;
+  max-width: 650px;
+  border-top: 1px solid #ccc;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.result-card {
+  width: 80%;
+  max-width: 645px;
+  border: 1px solid gray;
+  background-color: rgb(236, 239, 242);
+  margin-bottom: 3px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.result-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.result-image {
+  flex: 1;
+  margin: 10px;
+  padding: 10px 0px;
+  transition: transform 0.5s;
+}
+
+.result-image img:hover {
+  transform: scale(1.8);
+  transition: transform 0.5s;
+}
+
+.result-content {
+  flex: 3;
+  text-align: left;
+  overflow: hidden;
+}
+
+.result-image img {
+  border: 2.5px solid lightgray;
+  max-width: 100px;
+  height: auto;
+  transition: transform 0.5s;
+}
+
+.category {
+  font-style: italic;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.result-content h2 {
+  font-size: 15px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.result-content p {
+  font-size: 15px;
+  margin: 15px 0px;
+}
+
+.show-more-button {
+  margin-top: 5px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.show-more-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.show-less-button {
+  margin-top: 5px;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.show-less-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.results-headline h1 {
+  margin-top: 80px;
+}
+
+.results-headline h2 {
+  font-size: 25px;
+}
+
+.card-headline h2 {
+  font-size: 35px;
+  margin-bottom: 0%;
+}
+
+.back-button {
+  padding: 4px 5px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ccc;
+  font-size: 14px;
+}
+
+.back-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 70%;
+  border: 1px solid #ccc;
+  max-width: 650px;
+  font-size: 14px;
+}
+
+.table td {
+  padding: 3px;
+  border: 1px solid #ccc;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.table td:first-child {
+  width: 20%;
+  font-weight: bold;
+}
+
+.itemPhoto {
+  max-width: 150px;
+}

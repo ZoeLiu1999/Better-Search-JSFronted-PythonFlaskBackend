@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project2</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <div id="firstline">
+      <a href="https://www.ebay.com/" target="_blank">
+        <img
+          src="https://csci571.com/hw/hw6/images/eBayLogo.png"
+          alt="ebay-logo"
+        />
+      </a>
+      <h1>Shopping</h1>
+    </div>
+    <form id="search-form">
+      <label for="keywords">Keywords<span style="color: red">*</span>:</label>
+      <div id="tooltip-container">
+        <input
+          type="text"
+          id="keywords"
+          name="keywords"
+          required
+          oninput="hideTooltip()"
+          autocomplete="on"
+        />
+        <div id="tooltip">
+          <div id="triangle"></div>
+          <div id="tooltip-content">
+            <div id="tooltip-icon">!</div>
+            <span id="tooltiptext">Please fill out this field.</span>
+          </div>
+        </div>
+      </div>
+      <hr class="horizontal-line" />
+
+      <label for="price_range">Price Range: </label>
+      From
+      <input type="number" id="price_from" name="price_from" step="0.1" /> to
+      <input type="number" id="price_to" name="price_to" step="0.01" />
+
+      <hr class="horizontal-line" />
+
+      <label>Condition:</label>
+      <input type="checkbox" id="condition_new" name="condition" value="1000" />
+      New
+      <input
+        type="checkbox"
+        id="condition_used"
+        name="condition"
+        value="3000"
+      />
+      Used
+      <input
+        type="checkbox"
+        id="condition_very_good"
+        name="condition"
+        value="4000"
+      />
+      Very Good
+      <input
+        type="checkbox"
+        id="condition_good"
+        name="condition"
+        value="5000"
+      />
+      Good
+      <input
+        type="checkbox"
+        id="condition_acceptable"
+        name="condition"
+        value="6000"
+      />
+      Acceptable
+      <hr class="horizontal-line" />
+
+      <label for="returns_accepted">Seller:</label>
+      <input type="checkbox" id="returns_accepted" name="returns_accepted" />
+      Return Accepted
+      <hr class="horizontal-line" />
+
+      <label>Shipping:</label>
+      <input type="checkbox" id="free_shipping" name="free_shipping" /> Free
+      <input
+        type="checkbox"
+        id="expedited_shipping"
+        name="expedited_shipping"
+      />
+      Expedited
+      <hr class="horizontal-line" />
+
+      <label for="sort_order">Sort By:</label>
+      <select id="sort_order" name="sort_order">
+        <option value="BestMatch">Best Match</option>
+        <option value="CurrentPriceHighest">Price: highest first</option>
+        <option value="PricePlusShippingHighest">
+          Price + Shipping: highest first
+        </option>
+        <option value="PricePlusShippingLowest">
+          Price + Shipping: lowest first
+        </option>
+      </select>
+      <hr class="horizontal-line" />
+
+      <button type="button" onclick="clearForm()">Clear</button>
+      <button type="button" onclick="searchEbay()">Search</button>
+    </form>
+    <div id="results">
+      <!-- Display search results here -->
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>
