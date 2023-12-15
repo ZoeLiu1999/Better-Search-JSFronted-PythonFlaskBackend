@@ -1,4 +1,4 @@
-# Flask-Ebay-Project
+# Flask-BetterSearch
 
 Flask-Ebay-Project is a web application that enables users to search for eBay products based on specific criteria and access comprehensive information about individual items, offering a user-friendly web interface for interacting with eBay listings. This project is developed using Python Flask for the backend and JavaScript and HTML/CSS for the frontend.
 
